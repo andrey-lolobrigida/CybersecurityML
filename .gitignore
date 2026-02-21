@@ -1,0 +1,11 @@
+# ide
+.idea/
+
+# data
+data/
+
+# venv
+.venv/
+
+# env files
+.env
