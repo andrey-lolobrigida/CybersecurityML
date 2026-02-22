@@ -2,7 +2,7 @@
 .idea/
 
 # data
-data/
+# data/
 
 # venv
 .venv/
