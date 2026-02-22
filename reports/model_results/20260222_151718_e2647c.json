@@ -1,0 +1,152 @@
+{
+  "run_id": "20260222_151718_e2647c",
+  "dataset": "data/interim/encoded.csv",
+  "n_features": 17,
+  "feature_names": [
+    "network_packet_size",
+    "login_attempts",
+    "session_duration",
+    "ip_reputation_score",
+    "failed_logins",
+    "unusual_time_access",
+    "protocol_type_ICMP",
+    "protocol_type_TCP",
+    "protocol_type_UDP",
+    "browser_type_Chrome",
+    "browser_type_Edge",
+    "browser_type_Firefox",
+    "browser_type_Safari",
+    "browser_type_Unknown",
+    "encryption_used_AES",
+    "encryption_used_DES",
+    "encryption_used_Unencrypted"
+  ],
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true,
+    "n_train": 7629,
+    "n_test": 1908
+  },
+  "models": [
+    {
+      "model": "LogisticRegression",
+      "scaled": false,
+      "hyperparameters": {
+        "C": 1.0,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 1.0,
+        "max_iter": 1000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "liblinear",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "metrics": {
+        "accuracy": 0.728,
+        "sensitivity": 0.6483,
+        "specificity": 0.7924,
+        "precision": 0.7163,
+        "f1": 0.6806,
+        "roc_auc": 0.7875
+      }
+    },
+    {
+      "model": "GaussianNB",
+      "scaled": false,
+      "hyperparameters": {
+        "priors": null,
+        "var_smoothing": 1e-09
+      },
+      "metrics": {
+        "accuracy": 0.8108,
+        "sensitivity": 0.6483,
+        "specificity": 0.9422,
+        "precision": 0.9007,
+        "f1": 0.7539,
+        "roc_auc": 0.8407
+      }
+    },
+    {
+      "model": "SGDClassifier",
+      "scaled": true,
+      "hyperparameters": {
+        "memory": null,
+        "transform_input": null,
+        "verbose": false,
+        "scaler": "StandardScaler()",
+        "scaler__copy": true,
+        "scaler__with_mean": true,
+        "scaler__with_std": true,
+        "clf__alpha": 0.0001,
+        "clf__average": false,
+        "clf__class_weight": null,
+        "clf__early_stopping": false,
+        "clf__epsilon": 0.1,
+        "clf__eta0": 0.01,
+        "clf__fit_intercept": true,
+        "clf__l1_ratio": 0.15,
+        "clf__learning_rate": "optimal",
+        "clf__loss": "modified_huber",
+        "clf__max_iter": 1000,
+        "clf__n_iter_no_change": 5,
+        "clf__n_jobs": null,
+        "clf__penalty": "l2",
+        "clf__power_t": 0.5,
+        "clf__random_state": 42,
+        "clf__shuffle": true,
+        "clf__tol": 0.001,
+        "clf__validation_fraction": 0.1,
+        "clf__verbose": 0,
+        "clf__warm_start": false
+      },
+      "metrics": {
+        "accuracy": 0.6903,
+        "sensitivity": 0.7175,
+        "specificity": 0.6682,
+        "precision": 0.6362,
+        "f1": 0.6744,
+        "roc_auc": 0.7491
+      }
+    },
+    {
+      "model": "RandomForestClassifier",
+      "scaled": false,
+      "hyperparameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 100,
+        "n_jobs": null,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "metrics": {
+        "accuracy": 0.8831,
+        "sensitivity": 0.7468,
+        "specificity": 0.9934,
+        "precision": 0.9891,
+        "f1": 0.851,
+        "roc_auc": 0.8786
+      }
+    }
+  ]
+}
