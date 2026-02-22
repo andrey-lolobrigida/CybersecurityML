@@ -30,7 +30,7 @@ from sklearn.metrics import (
 from sklearn.model_selection import GridSearchCV, train_test_split
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "data" / "processed" / "features.csv"
+DATA_FILE = ROOT / "data" / "interim" / "encoded.csv"
 RESULTS_DIR = ROOT / "reports" / "rf_results"
 VIZ_DIR = ROOT / "visualization" / "rf_results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
