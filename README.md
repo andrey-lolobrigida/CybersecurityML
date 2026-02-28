@@ -184,3 +184,9 @@ The Cloud Run service is currently deployed with `--allow-unauthenticated`, maki
 - Add a FastAPI dependency that checks an `X-API-Key` header against a secret stored in [Google Secret Manager](https://cloud.google.com/secret-manager).
 
 Without some form of auth, anyone with the URL can query the model.
+
+---
+
+## Credits
+
+**Dataset:** [Cybersecurity Intrusion Detection Dataset](https://www.kaggle.com/datasets/dnkumars/cybersecurity-intrusion-detection-dataset?resource=download) by dnkumars, published on Kaggle.
