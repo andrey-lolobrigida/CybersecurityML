@@ -1,7 +1,7 @@
 [project]
 name = "cybersecurityml"
 version = "0.1.0"
-description = "Add your description here"
+description = "Machine learning pipeline for intrusion detection in network traffic"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi[standard]>=0.134.0",
