@@ -1,3 +1,49 @@
+app:
+  model_path: models/random_forest_20260222_212434.joblib
+
+  input:
+    # Raw columns accepted at inference time (data/raw schema, minus attack_detected)
+    drop_columns:
+      - session_id
+
+  preprocessing:
+    fillna:
+      encryption_used: Unencrypted
+    one_hot_encode:
+      protocol_type:
+        - ICMP
+        - TCP
+        - UDP
+      browser_type:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Unknown
+      encryption_used:
+        - AES
+        - DES
+        - Unencrypted
+
+  model_features:
+    - network_packet_size
+    - login_attempts
+    - session_duration
+    - ip_reputation_score
+    - failed_logins
+    - unusual_time_access
+    - protocol_type_ICMP
+    - protocol_type_TCP
+    - protocol_type_UDP
+    - browser_type_Chrome
+    - browser_type_Edge
+    - browser_type_Firefox
+    - browser_type_Safari
+    - browser_type_Unknown
+    - encryption_used_AES
+    - encryption_used_DES
+    - encryption_used_Unencrypted
+
 training:
   data:
     input: data/interim/encoded.csv
